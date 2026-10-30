@@ -12,93 +12,48 @@
 <link rel="stylesheet" href="style.css">
 </head>
 <body>
-<div class="music-control glass">
-  <button id="musicBtn" type="button" aria-label="تشغيل الموسيقى"><span>♫</span><span data-ar="تشغيل الموسيقى" data-en="Play Music">تشغيل الموسيقى</span><span id="musicState">Ⅱ</span></button>
+<div class="top-controls">
+  <div class="music-control glass"><button id="musicBtn" type="button" aria-label="تشغيل الموسيقى"><span>♫</span><span id="musicLabel">Play Music</span><span id="musicState">Ⅱ</span></button></div>
+  <div class="language-control glass"><button id="langBtn" type="button">عربي | English</button></div>
 </div>
-<div class="language-control glass"><button id="langBtn" type="button">عربي | English</button></div>
 
-<header class="opening" id="top">
-  <div class="bokeh"></div><div class="edge-flower flower-left">🌸<span>🌹</span>🌿</div><div class="edge-flower flower-right">🌿<span>🌹</span>🌸</div>
-  <div class="intro-copy">
+<!-- This visual is the generated design artwork, used as the exact full invitation composition. -->
+<main id="visualInvitation" class="visual-invitation">
+  <img class="invitation-art" src="assets/invitation-design.png" alt="تصميم دعوة خطوبة محمود وآية بالوردي والبنفسجي، مع الظرف والورود وتفاصيل الحفل والقاعة والاتجاهات">
+  <button id="openArtBtn" class="art-open-button" aria-label="افتح الدعوة">✉ <span data-ar="افتح الدعوة" data-en="Open Invitation">افتح الدعوة</span></button>
+</main>
+
+<!-- Accessible interactive version; shown after the invitation artwork is opened. -->
+<div id="interactiveInvitation" class="interactive-invitation" hidden>
+  <header class="opening" id="top">
+    <div class="edge-flower flower-left">🌸<span>🌹</span>🌿</div><div class="edge-flower flower-right">🌿<span>🌹</span>🌸</div>
     <p class="eyebrow" data-ar="بكل الحب والتقدير" data-en="With love and appreciation">بكل الحب والتقدير</p>
-    <p data-ar="يسعدنا دعوتكم لحضور" data-en="You are warmly invited to">يسعدنا دعوتكم لحضور</p>
-    <h2 data-ar="حفل خطوبة" data-en="Our Engagement">حفل خطوبة</h2>
-  </div>
-  <div class="envelope-wrap" id="envelopeWrap">
-    <div class="envelope">
-      <div class="env-back"></div><div class="env-letter"><div class="letter-heart">♡</div><div class="letter-script">Mahmoud <span>&amp;</span> Aya</div><div class="letter-small" data-ar="دعوة خطوبة" data-en="Engagement Invitation">دعوة خطوبة</div></div>
-      <div class="env-left"></div><div class="env-right"></div><div class="env-bottom"></div><div class="env-flap"></div>
-      <div class="ribbon"></div><div class="seal">♡<small>♡</small></div>
-    </div>
-  </div>
-  <button id="openBtn" class="open-button"><span>✉</span><span data-ar="افتح الدعوة" data-en="Open Invitation">افتح الدعوة</span></button>
-  <p class="scroll-hint" data-ar="افتح الدعوة لتبدأ رحلتكم معنا ↓" data-en="Open the invitation to begin ↓">افتح الدعوة لتبدأ رحلتكم معنا ↓</p>
-</header>
-
-<main id="invitation" class="invitation hidden">
+    <h1 data-ar="حفل خطوبة محمود & آية" data-en="Mahmoud & Aya's Engagement">حفل خطوبة محمود & آية</h1>
+    <p data-ar="الأربعاء 9 ديسمبر 2026 • الساعة 9 مساءً" data-en="Wednesday, December 9, 2026 • 9:00 PM">الأربعاء 9 ديسمبر 2026 • الساعة 9 مساءً</p>
+    <button id="showDetailsBtn" class="open-button"><span data-ar="عرض تفاصيل الدعوة ↓" data-en="View invitation details ↓">عرض تفاصيل الدعوة ↓</span></button>
+  </header>
   <section class="section couple-section floral">
     <div class="side-quote"><em>Two hearts,<br>one journey...<br>A lifetime of love</em><span>♡ ─ ♥ ─ ♡</span></div>
     <div class="section-main">
       <p class="eyebrow" data-ar="بكل الحب والتقدير" data-en="With love and appreciation">بكل الحب والتقدير</p>
       <h2 data-ar="نتشرف بدعوتكم لحضور حفل خطوبتنا" data-en="We invite you to celebrate our engagement">نتشرف بدعوتكم لحضور حفل خطوبتنا</h2>
-      <p class="english-line" data-ar="With great pleasure, we invite you to celebrate our engagement" data-en="With great pleasure, we invite you to celebrate our engagement">With great pleasure, we invite you to celebrate our engagement</p>
-      <h1 class="names"><span>محمود</span><b>&amp;</b><span>آية</span></h1>
-      <p class="couple-english">Mahmoud <span>&amp;</span> Aya</p><div class="ornament">─── ♡ ───</div>
-    </div>
-    <div class="heart-art">♡</div>
+      <p class="english-line">With great pleasure, we invite you to celebrate our engagement</p>
+      <h2 class="names"><span>محمود</span><b>&amp;</b><span>آية</span></h2><p class="couple-english">Mahmoud &amp; Aya</p><div class="ornament">─── ♡ ───</div>
+    </div><div class="heart-art">♡</div>
   </section>
-
   <section class="section parents-section floral">
-    <div class="parent"><p data-ar="والد العروسة" data-en="Bride's Father">والد العروسة</p><h3 data-ar="أيمن الرويعي" data-en="Ayman El Roweii">أيمن الرويعي</h3><small>Father of the Bride</small></div>
-    <div class="center-heart">♥<span>⌁</span></div>
-    <div class="parent"><p data-ar="والد العريس" data-en="Groom's Father">والد العريس</p><h3 data-ar="أحمد السنهوري" data-en="Ahmed El Senhory">أحمد السنهوري</h3><small>Father of the Groom</small></div>
+    <div class="parent"><p data-ar="والد العروسة" data-en="Bride's Father">والد العروسة</p><h3 data-ar="أيمن الرويعي" data-en="Ayman El Roweii">أيمن الرويعي</h3><small>Father of the Bride</small></div><div class="center-heart">♥</div><div class="parent"><p data-ar="والد العريس" data-en="Groom's Father">والد العريس</p><h3 data-ar="أحمد السنهوري" data-en="Ahmed El Senhory">أحمد السنهوري</h3><small>Father of the Groom</small></div>
   </section>
-
   <section class="section date-section">
     <div class="info-card"><div class="icon">▦</div><p data-ar="الأربعاء" data-en="Wednesday">الأربعاء</p><h3 data-ar="9 ديسمبر 2026" data-en="December 9, 2026">9 ديسمبر 2026</h3><small>Wednesday<br>December 9, 2026</small></div>
     <div class="info-card"><div class="icon">◷</div><p data-ar="الساعة" data-en="Time">الساعة</p><h3 data-ar="9:00 مساءً" data-en="9:00 PM">9:00 مساءً</h3><small>At<br>9:00 PM</small></div>
     <div class="info-card message-card"><div class="icon">♥</div><h3 data-ar="نتطلع لمشاركتكم هذه اللحظة المميزة" data-en="We look forward to sharing this special moment">نتطلع لمشاركتكم هذه اللحظة المميزة</h3><small>We look forward to celebrating<br>this special day with you.</small></div>
   </section>
-
-  <section class="section countdown-section">
-    <div class="countdown-title"><h2 data-ar="متبقي على الحفل" data-en="Countdown to our engagement">متبقي على الحفل</h2><p>Countdown to the Engagement</p><span>♡ ─ ♥ ─ ♡</span></div>
-    <div class="countdown" aria-live="polite">
-      <div class="counter"><strong id="days">--</strong><span data-ar="يوم" data-en="Days">يوم</span></div>
-      <div class="counter"><strong id="hours">--</strong><span data-ar="ساعة" data-en="Hours">ساعة</span></div>
-      <div class="counter"><strong id="minutes">--</strong><span data-ar="دقيقة" data-en="Minutes">دقيقة</span></div>
-      <div class="counter"><strong id="seconds">--</strong><span data-ar="ثانية" data-en="Seconds">ثانية</span></div>
-    </div>
-    <p id="countdownMessage" class="countdown-message"></p>
-  </section>
-
-  <section class="section venue-section floral">
-    <div class="venue-photo photo-main"><div class="photo-placeholder"><span>✿</span><b data-ar="أضف صورة القاعة هنا" data-en="Add the venue photo here">أضف صورة القاعة هنا</b><small>assets/venue-main.jpg</small></div></div>
-    <div class="venue-copy">
-      <p class="eyebrow" data-ar="مكان فرحتنا" data-en="Our celebration venue">مكان فرحتنا</p>
-      <h2 data-ar="قاعة مارسيليا جاردن" data-en="Marsilia Garden Hall">قاعة مارسيليا جاردن</h2>
-      <p class="venue-en">Marsilia Garden Hall</p>
-      <p class="address" data-ar="أول الطريق الدولي، 45 ميامي<br>أمام مدرسة القدس الدولية" data-en="First International Road, 45 Miami<br>In front of Al-Quds International School">أول الطريق الدولي، 45 ميامي<br>أمام مدرسة القدس الدولية</p>
-      <a class="map-button" href="https://maps.app.goo.gl/t5jkQnNQsenENkdw7?g_st=iw" target="_blank" rel="noopener noreferrer"><span>⌖</span><span data-ar="افتح الموقع على خرائط جوجل" data-en="Open location on Google Maps">افتح الموقع على خرائط جوجل</span></a>
-      <div class="mini-gallery"><div class="mini-placeholder">✿<small>venue-2.jpg</small></div><div class="mini-placeholder">✿<small>venue-3.jpg</small></div></div>
-      <p class="photo-note" data-ar="ملاحظة: أضف صور القاعة الحقيقية مكان الإطارات قبل النشر." data-en="Note: Replace the photo frames with real venue photos before publishing.">ملاحظة: أضف صور القاعة الحقيقية مكان الإطارات قبل النشر.</p>
-    </div>
-  </section>
-
-  <section class="section directions-section">
-    <div class="map-card"><div class="map-grid"></div><span class="map-pin">●</span><b>Marsilia Garden</b><small>45 Miami · Alexandria</small><a href="https://maps.app.goo.gl/t5jkQnNQsenENkdw7?g_st=iw" target="_blank" rel="noopener noreferrer" aria-label="Open map">↗</a></div>
-    <div class="directions-copy"><h2 data-ar="الموقع والاتجاهات" data-en="Location & Directions">الموقع والاتجاهات</h2><p data-ar="أول الطريق الدولي، 45 ميامي" data-en="First International Road, 45 Miami">أول الطريق الدولي، 45 ميامي</p><ol><li data-ar="اتجه إلى الطريق الدولي." data-en="Head toward International Road.">اتجه إلى الطريق الدولي.</li><li data-ar="تابع إلى منطقة 45 ميامي." data-en="Continue toward 45 Miami.">تابع إلى منطقة 45 ميامي.</li><li data-ar="القاعة أمام مدرسة القدس الدولية." data-en="The hall is in front of Al-Quds International School.">القاعة أمام مدرسة القدس الدولية.</li></ol><a class="text-link" href="https://maps.app.goo.gl/t5jkQnNQsenENkdw7?g_st=iw" target="_blank" rel="noopener noreferrer" data-ar="افتح الاتجاهات ↗" data-en="Get directions ↗">افتح الاتجاهات ↗</a></div>
-    <div class="qr-card"><img src="assets/qr-code.png" alt="رمز QR لفتح موقع القاعة على خرائط جوجل"><small data-ar="امسح الكود للوصول للموقع" data-en="Scan to open the location">امسح الكود للوصول للموقع</small></div>
-  </section>
-
-  <footer class="section footer-section floral">
-    <div class="footer-flower">❀</div><p class="eyebrow" data-ar="ننتظركم بكل الحب" data-en="With love, we await you">ننتظركم بكل الحب</p>
-    <h2 data-ar="وجودكم يسعدنا ويكمل فرحتنا" data-en="Your presence will make our joy complete">وجودكم يسعدنا ويكمل فرحتنا</h2>
-    <p>Your presence will make our joy complete ♥</p><div class="ornament">─── ♡ ───</div>
-    <button id="topBtn" class="open-button small-button" data-ar="العودة للبداية ↑" data-en="Back to top ↑">العودة للبداية ↑</button>
-  </footer>
-</main>
-<div class="motion-controls" id="motionControls" hidden><button id="pauseBtn" type="button" data-ar="إيقاف الحركة" data-en="Pause">إيقاف الحركة</button><button id="resumeBtn" type="button" data-ar="متابعة" data-en="Resume">متابعة</button><button id="restartBtn" type="button" data-ar="إعادة الدعوة" data-en="Restart">إعادة الدعوة</button></div>
+  <section class="section countdown-section"><div class="countdown-title"><h2 data-ar="متبقي على الخطوبة" data-en="Countdown to our engagement">متبقي على الخطوبة</h2><p>Countdown to the Engagement</p></div><div class="countdown"><div class="counter"><strong id="days">--</strong><span data-ar="يوم" data-en="Days">يوم</span></div><div class="counter"><strong id="hours">--</strong><span data-ar="ساعة" data-en="Hours">ساعة</span></div><div class="counter"><strong id="minutes">--</strong><span data-ar="دقيقة" data-en="Minutes">دقيقة</span></div><div class="counter"><strong id="seconds">--</strong><span data-ar="ثانية" data-en="Seconds">ثانية</span></div></div><p id="countdownMessage" class="countdown-message"></p></section>
+  <section class="section venue-section floral"><div class="venue-photo"><img src="assets/venue-main.jpg" alt="صورة قاعة مارسيليا جاردن" onerror="this.style.display='none';this.nextElementSibling.style.display='flex'"><div class="photo-placeholder"><span>✿</span><b data-ar="أضف صورة القاعة الحقيقية" data-en="Add the real venue photo">أضف صورة القاعة الحقيقية</b><small>assets/venue-main.jpg</small></div></div><div class="venue-copy"><p class="eyebrow" data-ar="مكان فرحتنا" data-en="Our celebration venue">مكان فرحتنا</p><h2 data-ar="قاعة مارسيليا جاردن" data-en="Marsilia Garden Hall">قاعة مارسيليا جاردن</h2><p class="venue-en">Marsilia Garden Hall</p><p class="address" data-ar="أول الطريق الدولي، 45 ميامي<br>أمام مدرسة القدس الدولية" data-en="First International Road, 45 Miami<br>In front of Al-Quds International School">أول الطريق الدولي، 45 ميامي<br>أمام مدرسة القدس الدولية</p><a class="map-button" href="https://maps.app.goo.gl/t5jkQnNQsenENkdw7?g_st=iw" target="_blank" rel="noopener noreferrer" data-ar="⌖ افتح الموقع على خرائط جوجل" data-en="⌖ Open location on Google Maps">⌖ افتح الموقع على خرائط جوجل</a><div class="mini-gallery"><img src="assets/venue-2.jpg" alt="صورة إضافية للقاعة" onerror="this.style.display='none'"><img src="assets/venue-3.jpg" alt="صورة إضافية للقاعة" onerror="this.style.display='none'"></div><p class="photo-note" data-ar="استبدل إطارات الصور بصور القاعة الحقيقية قبل النشر." data-en="Replace the image frames with real venue photos before publishing.">استبدل إطارات الصور بصور القاعة الحقيقية قبل النشر.</p></div></section>
+  <section class="section directions-section"><div class="map-card"><div class="map-grid"></div><span class="map-pin">●</span><b>Marsilia Garden</b><small>45 Miami · Alexandria</small><a href="https://maps.app.goo.gl/t5jkQnNQsenENkdw7?g_st=iw" target="_blank" rel="noopener noreferrer">↗</a></div><div class="directions-copy"><h2 data-ar="الموقع والاتجاهات" data-en="Location & Directions">الموقع والاتجاهات</h2><p data-ar="أول الطريق الدولي، 45 ميامي" data-en="First International Road, 45 Miami">أول الطريق الدولي، 45 ميامي</p><ol><li data-ar="اتجه إلى الطريق الدولي." data-en="Head toward International Road.">اتجه إلى الطريق الدولي.</li><li data-ar="تابع إلى منطقة 45 ميامي." data-en="Continue toward 45 Miami.">تابع إلى منطقة 45 ميامي.</li><li data-ar="القاعة أمام مدرسة القدس الدولية." data-en="The hall is in front of Al-Quds International School.">القاعة أمام مدرسة القدس الدولية.</li></ol><a class="text-link" href="https://maps.app.goo.gl/t5jkQnNQsenENkdw7?g_st=iw" target="_blank" rel="noopener noreferrer" data-ar="افتح الاتجاهات ↗" data-en="Get directions ↗">افتح الاتجاهات ↗</a></div><div class="qr-card"><img src="assets/qr-code.png" alt="رمز QR لفتح موقع القاعة على خرائط جوجل"><small data-ar="امسح الكود للوصول للموقع" data-en="Scan to open the location">امسح الكود للوصول للموقع</small></div></section>
+  <footer class="section footer-section floral"><div class="footer-flower">❀</div><p class="eyebrow" data-ar="ننتظركم بكل الحب" data-en="With love, we await you">ننتظركم بكل الحب</p><h2 data-ar="وجودكم يسعدنا ويكمل فرحتنا" data-en="Your presence will make our joy complete">وجودكم يسعدنا ويكمل فرحتنا</h2><p>Your presence will make our joy complete ♥</p><div class="ornament">─── ♡ ───</div><button id="topBtn" class="open-button" data-ar="العودة للبداية ↑" data-en="Back to top ↑">العودة للبداية ↑</button></footer>
+</div>
 <audio id="backgroundMusic" src="assets/engagement-music.mp3" preload="none" loop></audio>
 <script src="script.js"></script>
-</body>
-</html>
+</body></html>
